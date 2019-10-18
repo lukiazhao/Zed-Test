@@ -1,43 +1,35 @@
 <template>
   <div id="app">
     
+    <!-- Navigation bar -->
     <div class="container">
       <Navbar></Navbar>
     </div>
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> -->
-    <router-view/>
+
+    <!-- Router View  -->
+    <div class="container">
+      <router-view/>
+    </div>
+
+    <!-- Footer -->
+    <footer class="layout_footer">
+      <Footer/>
+    </footer>
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar'
+import Navbar from '@/layouts/Navbar'
+import Footer from '@/layouts/Footer'
 
 export default {
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style>
+  @import './../css/style.css';
 </style>
