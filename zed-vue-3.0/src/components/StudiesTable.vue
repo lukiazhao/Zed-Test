@@ -8,9 +8,9 @@
         :per-page="perPage"
         stacked="md"
         striped hover
-        empty-filtered-text="No matching record"
         responsive="sm"
         >
+
         <!-- show study details  -->
         <template v-slot:cell(actions)="row">
             <b-button size="sm" @click="row.toggleDetails" class="mr-2 detail_btn">

@@ -1,17 +1,26 @@
 <template>
-    <b-container fluid>
-        <!-- Seach Box -->
-        <b-container class="mt-3">
-            <b-row align-h="end">
-                <b-form inline>
-                    <b-input class="search_bar" type="text" v-model="search_text" placeholder="Search GUID" @keyup.enter="onSearch"></b-input>
-                    <b-button variant="primary" size="md" @click="onSearch">Search</b-button>
-                </b-form>
-            </b-row>
+    <div>
+        <b-container fluid>
+            <!-- Seach Box -->
+            <b-container class="mt-3">
+                <b-row align-h="end">
+                    <b-form inline>
+                        <b-input class="search_bar" type="text" v-model="search_text" placeholder="Search GUID" @keyup.enter="onSearch"></b-input>
+                        <b-button variant="primary" size="md" @click="onSearch">Search</b-button>
+                    </b-form>
+                </b-row>
+            </b-container>
+            <!-- Study Table -->
+            <StudiesTable :studies=studies></StudiesTable>
         </b-container>
-        <!-- Study Table -->
-        <StudiesTable :studies=studies></StudiesTable>
-    </b-container>
+
+        <!-- GUID not found modal -->
+        <div>
+            <b-modal id="modal-center" ref="notfound_modal" centered title="Study Not Found">
+                <p class="my-4">GUID: {{ search_text }} is missing. Please make sure the GUID is currect. </p>
+            </b-modal>
+        </div>
+    </div> 
 </template>
 
 <script>
@@ -46,12 +55,15 @@ export default {
         onSearch() {
             if (this.search_text) {
                 axios.get('/api/study/' + this.search_text).then(response => {
-                    console.log(response.data)
-                    if (response.data) {
+                    if (response.status == "204") {    // No Content success
+                        // show modal
+                        this.$refs['notfound_modal'].show()
+                    } else {
                         this.studies = [response.data];
                     }
                 })
             } else {
+                // No search text -> Get all studies.
                 this.loadStudies();
             }
         }
