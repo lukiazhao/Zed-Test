@@ -1,6 +1,9 @@
 ﻿using System;
 namespace Zeddotnet.Models
 {
+    /// <summary>
+    /// Study Class according to json files from File folder
+    /// </summary>
     public class Study
     {
         public string GUID { get; set; }

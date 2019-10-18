@@ -9,6 +9,10 @@ using System.Collections.Generic;
 
 namespace Zeddotnet.Services
 {
+    /// <summary>
+    /// The main class for managing Study
+    /// Contains all methods for performing basic loading and returning functions
+    /// </summary>
     public class StudyManager : IStudyManager
     {
         private Dictionary<string, Study> studies;
@@ -22,8 +26,11 @@ namespace Zeddotnet.Services
 
         }
 
+        // Read json files and deserialise to study object.
+        // Return a dictionary of studies
         public Dictionary<string, Study> LoadStudies()
         {
+
             string root = "./Files";
             string[] fileNames = Directory.GetFiles(root);
 
@@ -39,14 +46,23 @@ namespace Zeddotnet.Services
             return tempStudies;
         }
 
+        // Return a dictionary of all studies stored in the File folder
         public Dictionary<string, Study> GetAll()
         {
             return studies;
         }
 
+        // Return a single study object found by guid.
         public Study GetStudyByGUID(string guid)
         {
-            return studies[guid];
+            if (studies.ContainsKey(guid) == true)
+            {
+                return studies[guid];
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
