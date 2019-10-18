@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Zeddotnet.Models;
 
 namespace Zed_dotnet
 {
@@ -15,6 +16,7 @@ namespace Zed_dotnet
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
+            //StudyManager studyManager = new StudyManager();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

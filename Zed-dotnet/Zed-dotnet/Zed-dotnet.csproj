@@ -6,10 +6,32 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+    <Folder Include="Models\" />
+    <Folder Include="Files\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="Files\66c95c0f-7da9-4afb-9e6c-aa31a55d1230.json" />
+    <Content Remove="Files\a36c7825-5e53-40dd-afde-0225f33c1ff3.json" />
+    <Content Remove="Files\b311070f-c364-43a8-af92-4d905a256bca.json" />
+    <Content Remove="Files\d47da2a8-fd1c-415e-8485-dfb9ae6ab03e.json" />
+    <Content Remove="Files\d85a94b8-7f39-4e53-92e5-510314cb3abf.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\66c95c0f-7da9-4afb-9e6c-aa31a55d1230.json" />
+    <None Include="Files\a36c7825-5e53-40dd-afde-0225f33c1ff3.json" />
+    <None Include="Files\b311070f-c364-43a8-af92-4d905a256bca.json" />
+    <None Include="Files\d47da2a8-fd1c-415e-8485-dfb9ae6ab03e.json" />
+    <None Include="Files\d85a94b8-7f39-4e53-92e5-510314cb3abf.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\StudiesController.cs" />
+  </ItemGroup>
 </Project>
