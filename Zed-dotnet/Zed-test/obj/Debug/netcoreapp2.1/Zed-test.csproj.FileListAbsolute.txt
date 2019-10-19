@@ -1,0 +1,17 @@
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/bin/Debug/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/bin/Debug/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/bin/Debug/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/bin/Debug/netcoreapp2.1/Zed-test.deps.json
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/bin/Debug/netcoreapp2.1/Zed-test.runtimeconfig.json
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/bin/Debug/netcoreapp2.1/Zed-test.runtimeconfig.dev.json
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/bin/Debug/netcoreapp2.1/Zed-test.dll
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/bin/Debug/netcoreapp2.1/Zed-test.pdb
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/bin/Debug/netcoreapp2.1/Zed-dotnet.dll
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/bin/Debug/netcoreapp2.1/Zed-dotnet.pdb
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/obj/Debug/netcoreapp2.1/Zed-test.csprojAssemblyReference.cache
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/obj/Debug/netcoreapp2.1/Zed-test.csproj.CoreCompileInputs.cache
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/obj/Debug/netcoreapp2.1/Zed-test.AssemblyInfoInputs.cache
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/obj/Debug/netcoreapp2.1/Zed-test.AssemblyInfo.cs
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/obj/Debug/netcoreapp2.1/Zed-test.csproj.CopyComplete
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/obj/Debug/netcoreapp2.1/Zed-test.dll
+/Users/jingyizhao/Desktop/Interview Test/Zed-dotnet/Zed-test/obj/Debug/netcoreapp2.1/Zed-test.pdb

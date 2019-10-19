@@ -9,44 +9,36 @@ using System.Collections.Generic;
 
 namespace Zeddotnet.Services
 {
+    /// <summary>
+    /// The main class for managing Study
+    /// Contains all methods for performing reading and returning studies 
+    /// </summary>
     public class StudyManager : IStudyManager
     {
-        private Dictionary<string, Study> studies;
+        private readonly IFileLoader _fileLoader;
+        private string fileRoot = "./Files";
 
-        public StudyManager()
+        public StudyManager(IFileLoader fileLoader)
         {
-            if (studies == null || studies.Count == 0)
-            {
-                studies = LoadStudies();
-            }
-
+            _fileLoader = fileLoader;
         }
 
-        public Dictionary<string, Study> LoadStudies()
-        {
-            string root = "./Files";
-            string[] fileNames = Directory.GetFiles(root);
-
-            Dictionary<string, Study> tempStudies = new Dictionary<string, Study>();
-
-            foreach (string fileName in fileNames)
-            {
-                var jsonText = File.ReadAllText(fileName);
-                Study study = JsonConvert.DeserializeObject<Study>(jsonText);
-                tempStudies.Add(study.GUID, study);
-            }
-
-            return tempStudies;
-        }
-
+        // Return a dictionary of all studies stored in the File folder
         public Dictionary<string, Study> GetAll()
         {
-            return studies;
+            return _fileLoader.LoadStudies(fileRoot);
         }
 
+        // Return a single study object found by guid.
         public Study GetStudyByGUID(string guid)
         {
-            return studies[guid];
+            var studies = _fileLoader.LoadStudies(fileRoot);
+
+            if (studies.ContainsKey(guid) == true)
+            {
+                return studies[guid];
+            }
+            return null;
         }
     }
 }

@@ -2,12 +2,29 @@
   <MonoDevelop.Ide.ItemProperties.Zed-dotnet PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Zed-dotnet/Interfaces/IStudyManager.cs">
     <Files>
-      <File FileName="Zed-dotnet/Services/StudyManager.cs" Line="47" Column="36" />
-      <File FileName="Zed-dotnet/Interfaces/IStudyManager.cs" Line="15" Column="6" />
-      <File FileName="Zed-dotnet/Controllers/StudyController.cs" Line="9" Column="1" />
-      <File FileName="Zed-dotnet/Startup.cs" Line="31" Column="54" />
-      <File FileName="Zed-dotnet/Models/Study.cs" Line="47" Column="51" />
+      <File FileName="Zed-dotnet/Services/StudyManager.cs" Line="29" Column="52" />
+      <File FileName="Zed-dotnet/Services/FileLoader.cs" Line="10" Column="35" />
+      <File FileName="Zed-dotnet/Controllers/StudyController.cs" Line="4" Column="16" />
+      <File FileName="Zed-dotnet/Interfaces/IFileLoader.cs" Line="13" Column="54" />
+      <File FileName="Zed-dotnet/Interfaces/IStudyManager.cs" Line="18" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Zed-dotnet" expanded="True">
+            <Node name="Zed-test" expanded="True">
+              <Node name="Zed_test" expanded="True">
+                <Node name="FileLoaderTests" expanded="True">
+                  <Node name="LoadStudies_DirectoryNotFoundException" selected="True" />
+                </Node>
+                <Node name="StudyControllerTests" expanded="True" />
+                <Node name="StudyManagerTests" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
