@@ -16,6 +16,7 @@ namespace Zeddotnet.Services
     public class StudyManager : IStudyManager
     {
         private readonly IFileLoader _fileLoader;
+        private string fileRoot = "./Files";
 
         public StudyManager(IFileLoader fileLoader)
         {
@@ -25,22 +26,19 @@ namespace Zeddotnet.Services
         // Return a dictionary of all studies stored in the File folder
         public Dictionary<string, Study> GetAll()
         {
-            return _fileLoader.LoadStudies();
+            return _fileLoader.LoadStudies(fileRoot);
         }
 
         // Return a single study object found by guid.
         public Study GetStudyByGUID(string guid)
         {
-            var studies = _fileLoader.LoadStudies();
+            var studies = _fileLoader.LoadStudies(fileRoot);
 
             if (studies.ContainsKey(guid) == true)
             {
                 return studies[guid];
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
     }
 }

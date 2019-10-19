@@ -11,11 +11,9 @@ namespace Zeddotnet.Services
     {
         // Read json files and deserialise to study object.
         // Return a dictionary of studies
-        public Dictionary<string, Study> LoadStudies()
+        public Dictionary<string, Study> LoadStudies(string fileRoot)
         {
-
-            string root = "./Files";
-            string[] fileNames = Directory.GetFiles(root);
+            string[] fileNames = Directory.GetFiles(fileRoot);
 
             Dictionary<string, Study> tempStudies = new Dictionary<string, Study>();
 

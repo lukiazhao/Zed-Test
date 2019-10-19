@@ -10,6 +10,6 @@ namespace Zeddotnet.Interfaces
     /// </summary>
     public interface IFileLoader
     {
-        Dictionary<string, Study> LoadStudies();
+        Dictionary<string, Study> LoadStudies(string fileRoot);
     }
 }
