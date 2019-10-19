@@ -16,8 +16,8 @@
 
         <!-- GUID not found modal -->
         <div>
-            <b-modal id="modal-center" ref="notfound_modal" centered title="Study Not Found">
-                <p class="my-4">GUID: {{ search_text }} is missing. Please make sure the GUID is currect. </p>
+            <b-modal id="modal-center" ref="notfound_modal" centered title="Error">
+                <p class="my-4">{{ error_message }}</p>
             </b-modal>
         </div>
     </div> 
@@ -36,6 +36,7 @@ export default {
             studies: null,
             search_text: null,
             show_table: true,
+            error_message: '',
         }
     },
     methods: {
@@ -45,7 +46,12 @@ export default {
         loadStudies() {
             var temp = []
             axios.get('/api/study').then(response => {
-                response.data.forEach(study => temp.push(study))
+                if (response.status == 204) {
+                    this.error_message = `Study not found`
+                    this.$refs['notfound_modal'].show()
+                } else {
+                    response.data.forEach(study => temp.push(study))
+                }
             })
             this.studies = temp;
         },
@@ -55,12 +61,13 @@ export default {
         onSearch() {
             if (this.search_text) {
                 axios.get('/api/study/' + this.search_text).then(response => {
-                    if (response.status == "204") {    // No Content success
+                    if (response.status == 204) {    // No Content success
                         // show modal
+                        this.error_message = `Study(${ this.search_text }) does not exist. `
                         this.$refs['notfound_modal'].show()
                     } else {
                         this.studies = [response.data];
-                    }
+                    } 
                 })
             } else {
                 // No search text -> Get all studies.
