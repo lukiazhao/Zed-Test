@@ -22,7 +22,15 @@ namespace Zeddotnet.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Study>> Get()
         {
-            return _studyManger.GetAll().Values.ToList<Study>();
+            try
+            {
+                return _studyManger.GetAll().Values.ToList<Study>();
+
+            } catch (System.IO.DirectoryNotFoundException)
+            {
+                // catch IO exceptions
+                return Json("Study files not found.");
+            }
         }
 
         // GET api/study/{guid}

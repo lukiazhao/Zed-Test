@@ -16,7 +16,7 @@ namespace Zeddotnet.Services
     public class StudyManager : IStudyManager
     {
         private readonly IFileLoader _fileLoader;
-        private string fileRoot = "./Files";
+        private readonly string fileRoot = "./Files";
 
         public StudyManager(IFileLoader fileLoader)
         {
