@@ -1,6 +1,6 @@
 # Zed Studies
 
-A small project composed of backend Web API Service (ASP.NET Core) and frontend (VueJS).
+A small project composed of backend Web API Service (ASP.NET Core 2.1) and frontend (VueJS 3.0).
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ A small project composed of backend Web API Service (ASP.NET Core) and frontend 
 ### Prerequisites
 
 ```
-nodejs, npm, Visual Studio
+nodejs, npm, (Visual Studio)
 ```
 
 ### Installing 
@@ -19,10 +19,12 @@ nodejs, npm, Visual Studio
 git clone https://github.com/lukiazhao/Zed-Test.git
 ```
 2. open terminal/cmd and get into the project folder
-/Users/jingyizhao/Desktop/Screen Shot 2019-10-20 at 12.11.30 am.png
 ```
 $ dotnet run --project ./Zed-dotnet/Zed-dotnet/Zed-dotnet.csproj 
 ```
+OR
+double-click Zed-dotnet.sln and open solution in Visual studio. 
+Build and run Zed-dotnet.
 
 ### Run Frontend
 3. get into zed-vue-3.0 folder 
