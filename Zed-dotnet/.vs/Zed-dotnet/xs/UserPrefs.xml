@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{E0408BC5-40BE-4F99-917F-A86EF795761B}|Default">
   <MonoDevelop.Ide.ItemProperties.Zed-dotnet PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Zed-dotnet/Models/Study.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Zed-dotnet/Services/StudyManager.cs">
     <Files>
-      <File FileName="Zed-dotnet/Services/StudyManager.cs" Line="56" Column="29" />
-      <File FileName="Zed-dotnet/Interfaces/IStudyManager.cs" Line="9" Column="79" />
-      <File FileName="Zed-dotnet/Controllers/StudyController.cs" Line="10" Column="2" />
+      <File FileName="Zed-dotnet/Services/StudyManager.cs" Line="20" Column="5" />
+      <File FileName="Zed-dotnet/Interfaces/IStudyManager.cs" Line="12" Column="6" />
+      <File FileName="Zed-dotnet/Controllers/StudyController.cs" Line="32" Column="45" />
+      <File FileName="Zed-dotnet/Interfaces/IFileLoader.cs" Line="7" Column="5" />
+      <File FileName="Zed-dotnet/Startup.cs" Line="1" Column="1" />
       <File FileName="Zed-dotnet/Models/Study.cs" Line="14" Column="17" />
-      <File FileName="Zed-dotnet/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Zed-dotnet/Services/FileLoader.cs" Line="10" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

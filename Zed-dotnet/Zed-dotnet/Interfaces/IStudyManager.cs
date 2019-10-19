@@ -10,8 +10,6 @@ namespace Zeddotnet.Interfaces
     /// </summary>
     public interface IStudyManager
     {
-        Dictionary<string, Study> LoadStudies();
-
         Dictionary<string, Study> GetAll();
 
         Study GetStudyByGUID(string guid);
