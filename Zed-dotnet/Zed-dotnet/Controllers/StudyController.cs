@@ -22,14 +22,37 @@ namespace Zeddotnet.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Study>> Get()
         {
-            return _studyManger.GetAll().Values.ToList<Study>();
+            List<Study> studyList = null;
+
+            try
+            {
+                studyList = _studyManger.GetAll().Values.ToList<Study>();
+
+            }
+            catch (System.IO.DirectoryNotFoundException)
+            {
+                return null;
+            }
+
+            return studyList;
         }
 
         // GET api/study/{guid}
         [HttpGet("{guid}")]
         public ActionResult<Study> Get(string guid)
         {
-            return _studyManger.GetStudyByGUID(guid);
+            Study study = null;
+
+            try
+            {
+                study = _studyManger.GetStudyByGUID(guid);
+            }
+            catch (System.IO.DirectoryNotFoundException)
+            {
+                return null;
+            }
+
+            return study;
         }
     }
 }
