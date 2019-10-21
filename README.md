@@ -26,13 +26,26 @@ OR
 double-click Zed-dotnet.sln and open solution in Visual studio. 
 Build and run Zed-dotnet.
 
+### Run Test
+Open Zed-dotnet.sln in visual studio
+Open Test Explorer
+To run all the tests in a solution, choose the Run All icon.
+
 ### Run Frontend
-3. get into zed-vue-3.0 folder 
+4. get into zed-vue-3.0 folder 
 ``` 
 npm install
 npm run serve
 ```
-4. open browser with url :  ```http://localhost:8080/ ```
-5. Click 'Study' in the navigation bar to view the study table
+5. open browser with url :  ```http://localhost:8080/ ```
+6. Click 'Study' in the navigation bar to view the study table
 
-
+### Further Improvement
+7. The study model can be further broken down
+For instance: 
+````
+Study  
+  |---- Patient
+  |---- Origanization
+  |---- ...
+````
