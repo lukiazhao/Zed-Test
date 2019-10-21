@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Zed-dotnet\Zed-dotnet.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FilesTest\" />
