@@ -40,8 +40,8 @@ npm run serve
 5. open browser with url :  ```http://localhost:8080/ ```
 6. Click 'Study' in the navigation bar to view the study table
 
-### Further Improvement
-7. The study model can be further broken down
+### Discussion: Model design
+7. The study model can be broken down into models as `study` has many properties.
 For instance: 
 ````
 Study  
