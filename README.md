@@ -18,13 +18,16 @@ nodejs, npm, (Visual Studio)
 ```
 git clone https://github.com/lukiazhao/Zed-Test.git
 ```
-2. open terminal/cmd and get into the project folder
+2. run with visual studio IIS
+double-click Zed-dotnet.sln and open solution in Visual studio. 
+Build and run Zed-dotnet.
+
+Or
+open terminal/cmd and get into the project folder
 ```
 $ dotnet run --project ./Zed-dotnet/Zed-dotnet/Zed-dotnet.csproj 
 ```
-OR
-double-click Zed-dotnet.sln and open solution in Visual studio. 
-Build and run Zed-dotnet.
+And change the proxy to ```proxy: 'https://localhost:5000``` in zed-vue-3.0/vue.config.js
 
 ### Run Test
 Open Zed-dotnet.sln in visual studio
